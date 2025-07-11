@@ -1,0 +1,174 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Wireless Headphones",
+      "description": "High-quality wireless headphones with noise cancellation.",
+      "price": 79.99,
+      "category": "Audio",
+      "image": "https://picsum.photos/seed/headphones/300/200"
+    },
+    {
+      "id": "2",
+      "name": "USB-C Charger",
+      "description": "Fast charging USB-C wall charger.",
+      "price": 25.5,
+      "category": "Chargers",
+      "image": "https://picsum.photos/seed/charger/300/200"
+    },
+    {
+      "id": "3",
+      "name": "Phone Stand",
+      "description": "Adjustable aluminum phone stand.",
+      "price": 12.99,
+      "category": "Stands",
+      "image": "https://picsum.photos/seed/stand/300/200"
+    },
+    {
+      "id": "4",
+      "name": "Bluetooth Speaker",
+      "description": "Portable speaker with amazing sound.",
+      "price": 49,
+      "category": "Audio",
+      "image": "https://picsum.photos/seed/speaker/300/200"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "productId": "3",
+      "userName": "Ali",
+      "rating": 5,
+      "comment": "Excellent!",
+      "date": "2025-07-01T10:00:00Z"
+    },
+    {
+      "id": "5295",
+      "productId": "2",
+      "userName": "dddd",
+      "rating": 3,
+      "comment": "dfrferf3fef"
+    },
+    {
+      "id": "cb2c",
+      "productId": "2",
+      "userName": "ررررررررررررر",
+      "rating": 1,
+      "comment": "يييييييييييييييييييييييي",
+      "date": "2025-07-03T18:45:13.538Z"
+    }
+  ],
+  "wishList": [],
+  "users": [
+    {
+      "id": "9031",
+      "fullName": "hass",
+      "email": "hass@gmail.com",
+      "password": "0000",
+      "name": "Hashem",
+      "avatar": ""
+    },
+    {
+      "id": "93cf",
+      "fullName": "obai n",
+      "email": "g@g.com",
+      "password": "1111",
+      "name": "obai nass",
+      "avatar": ""
+    }
+  ],
+  "cartItems": [],
+  "orders": [
+    {
+      "id": "900a",
+      "userId": "9031",
+      "items": [
+        {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "High-quality wireless headphones with noise cancellation.",
+          "price": 79.99,
+          "category": "Audio",
+          "image": "https://picsum.photos/seed/headphones/300/200",
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "USB-C Charger",
+          "description": "Fast charging USB-C wall charger.",
+          "price": 25.5,
+          "category": "Chargers",
+          "image": "https://picsum.photos/seed/charger/300/200",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Phone Stand",
+          "description": "Adjustable aluminum phone stand.",
+          "price": 12.99,
+          "category": "Stands",
+          "image": "https://picsum.photos/seed/stand/300/200",
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Bluetooth Speaker",
+          "description": "Portable speaker with amazing sound.",
+          "price": 49,
+          "category": "Audio",
+          "image": "https://picsum.photos/seed/speaker/300/200",
+          "quantity": 1
+        }
+      ],
+      "total": 167.48,
+      "date": "2025-07-10T17:46:07.784Z",
+      "status": "pending"
+    },
+    {
+      "id": "96a8",
+      "userId": "9031",
+      "items": [
+        {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "High-quality wireless headphones with noise cancellation.",
+          "price": 79.99,
+          "category": "Audio",
+          "image": "https://picsum.photos/seed/headphones/300/200",
+          "quantity": 3
+        },
+        {
+          "id": "2",
+          "name": "USB-C Charger",
+          "description": "Fast charging USB-C wall charger.",
+          "price": 25.5,
+          "category": "Chargers",
+          "image": "https://picsum.photos/seed/charger/300/200",
+          "quantity": 2
+        },
+        {
+          "id": "4",
+          "name": "Bluetooth Speaker",
+          "description": "Portable speaker with amazing sound.",
+          "price": 49,
+          "category": "Audio",
+          "image": "https://picsum.photos/seed/speaker/300/200",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Phone Stand",
+          "description": "Adjustable aluminum phone stand.",
+          "price": 12.99,
+          "category": "Stands",
+          "image": "https://picsum.photos/seed/stand/300/200",
+          "quantity": 2
+        }
+      ],
+      "total": 365.95,
+      "date": "2025-07-10T18:52:40.432Z"
+    }
+  ]
+}
+
+//demo
