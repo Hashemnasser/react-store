@@ -1,6 +1,11 @@
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+const API_URL = `${BASE_URL}/products`;
+
 export const fetchProducts = async () => {
   try {
-    const response = await fetch("http://localhost:5000/products");
+    const response = await fetch(API_URL);
     if (!response.ok) {
       throw new Error("Failed to fetch products");
     }
@@ -14,7 +19,7 @@ export const fetchProducts = async () => {
 
 export const fetchProductById = async (id) => {
   try {
-    const response = await fetch(`http://localhost:5000/products/${id}`);
+    const response = await fetch(`API_URL/${id}`);
     if (!response.ok) {
       throw new Error("❌ Failed to fetch product with id: " + id);
     }

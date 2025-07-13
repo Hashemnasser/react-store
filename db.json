@@ -58,7 +58,14 @@
       "date": "2025-07-03T18:45:13.538Z"
     }
   ],
-  "wishList": [],
+  "wishList": [
+    {
+      "id": "2"
+    },
+    {
+      "id": "3"
+    }
+  ],
   "users": [
     {
       "id": "9031",
@@ -77,7 +84,32 @@
       "avatar": ""
     }
   ],
-  "cartItems": [],
+  "cartItems": [
+    {
+      "id": "c693",
+      "userId": "93cf",
+      "productId": "3",
+      "quantity": 1
+    },
+    {
+      "id": "1481",
+      "userId": "93cf",
+      "productId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "8aca",
+      "userId": "93cf",
+      "productId": "1",
+      "quantity": 1
+    },
+    {
+      "id": "28eb",
+      "userId": "93cf",
+      "productId": "4",
+      "quantity": 1
+    }
+  ],
   "orders": [
     {
       "id": "900a",
@@ -167,6 +199,51 @@
       ],
       "total": 365.95,
       "date": "2025-07-10T18:52:40.432Z"
+    },
+    {
+      "id": "3a5f",
+      "userId": "93cf",
+      "items": [
+        {
+          "id": "3",
+          "name": "Phone Stand",
+          "description": "Adjustable aluminum phone stand.",
+          "price": 12.99,
+          "category": "Stands",
+          "image": "https://picsum.photos/seed/stand/300/200",
+          "quantity": 2
+        },
+        {
+          "id": "2",
+          "name": "USB-C Charger",
+          "description": "Fast charging USB-C wall charger.",
+          "price": 25.5,
+          "category": "Chargers",
+          "image": "https://picsum.photos/seed/charger/300/200",
+          "quantity": 2
+        },
+        {
+          "id": "1",
+          "name": "Wireless Headphones",
+          "description": "High-quality wireless headphones with noise cancellation.",
+          "price": 79.99,
+          "category": "Audio",
+          "image": "https://picsum.photos/seed/headphones/300/200",
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Bluetooth Speaker",
+          "description": "Portable speaker with amazing sound.",
+          "price": 49,
+          "category": "Audio",
+          "image": "https://picsum.photos/seed/speaker/300/200",
+          "quantity": 1
+        }
+      ],
+      "total": 205.97,
+      "date": "2025-07-11T17:58:56.606Z",
+      "status": "pending"
     }
   ]
 }

@@ -60,13 +60,18 @@ const Navbar = () => {
               WishList
             </Link>
           </li>
+          <li>
+            <Link to="/privacy-policy" className="hover:text-blue-600">
+              Privacy Policy
+            </Link>
+          </li>
           {user && (
             <li>
               <Link to="/orders" className="hover:text-blue-600">
                 My Orders
               </Link>
             </li>
-          )}{" "}
+          )}
           {user && (
             <li>
               <Link to="/profile" className="hover:text-blue-600">
@@ -100,7 +105,7 @@ const Navbar = () => {
 
           {/* Cart Icon */}
           <Link to="/cart" className="relative">
-            <span className="material-icons text-gray-700 text- dark:text-white">
+            <span className="material-icons text-gray-700 dark:text-white">
               shopping_cart
             </span>
             <span
@@ -111,7 +116,7 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* User Menu */}
+          {/* User Actions */}
           {user ? (
             <div className="flex items-center gap-2">
               <div
@@ -136,10 +141,10 @@ const Navbar = () => {
             </div>
           )}
 
-          {/* Mobile Menu Icon */}
+          {/* Mobile Menu Button */}
           <span
             onClick={() => setMenuOpen(true)}
-            className="md:hidden  material-icons cursor-pointer text-gray-600 hover:text-blue-500 hover:bg-slate-100 rounded-full">
+            className="md:hidden material-icons cursor-pointer text-gray-600 hover:text-blue-500 hover:bg-slate-100 rounded-full">
             more_vert
           </span>
         </div>
@@ -147,49 +152,81 @@ const Navbar = () => {
 
       {/* Mobile Sidebar Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-50">
-          <div className="fixed top-0 right-0 w-64 h-full bg-white dark:bg-gray-900 shadow-lg p-6 flex flex-col gap-4 z-50">
-            <div className="flex justify-between items-center mb-2">
+        <>
+          {/* الخلفية السوداء */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-40"
+            onClick={() => setMenuOpen(false)}
+          />
+
+          {/* القائمة الجانبية */}
+          <div className="fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-gray-900 shadow-lg p-6 overflow-y-auto flex flex-col">
+            {/* رأس القائمة */}
+            <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold text-blue-600">Menu</h2>
               <button
-                className="material-icons text-gray-600 text-2xl cursor-pointer dark:text-white"
                 onClick={() => setMenuOpen(false)}
-                aria-label="Close Menu">
+                className="material-icons text-2xl text-gray-700 dark:text-white">
                 close
               </button>
             </div>
-            <Link to="/" onClick={() => setMenuOpen(false)}>
+
+            {/* روابط القائمة */}
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+              className="py-2 hover:text-blue-600">
               Home
             </Link>
-            <Link to="/products" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="/products"
+              onClick={() => setMenuOpen(false)}
+              className="py-2 hover:text-blue-600">
               Products
             </Link>
-            <Link to="/cart" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="/cart"
+              onClick={() => setMenuOpen(false)}
+              className="py-2 hover:text-blue-600">
               Cart
             </Link>
-            <Link to="/wishlist" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="/wishlist"
+              onClick={() => setMenuOpen(false)}
+              className="py-2 hover:text-blue-600">
               WishList
             </Link>
+            <Link
+              to="/privacy-policy"
+              onClick={() => setMenuOpen(false)}
+              className="py-2 hover:text-blue-600">
+              Privacy Policy
+            </Link>
+
             {user && (
-              <Link to="/orders" onClick={() => setMenuOpen(false)}>
-                My Orders
-              </Link>
+              <>
+                <Link
+                  to="/orders"
+                  onClick={() => setMenuOpen(false)}
+                  className="py-2 hover:text-blue-600">
+                  My Orders
+                </Link>
+                <Link
+                  to="/profile"
+                  onClick={() => setMenuOpen(false)}
+                  className="py-2 hover:text-blue-600">
+                  Profile
+                </Link>
+              </>
             )}
-            {user && (
-              <Link
-                to="/profile"
-                onClick={() => setMenuOpen(false)}
-                className="hover:text-blue-600 dark:text-white">
-                Profile
-              </Link>
-            )}
+
             {user ? (
               <button
                 onClick={() => {
                   logout();
                   setMenuOpen(false);
                 }}
-                className="text-red-600 text-left hover:underline mt-2">
+                className="py-2 text-left text-red-600 hover:underline">
                 Sign Out
               </button>
             ) : (
@@ -197,19 +234,19 @@ const Navbar = () => {
                 <Link
                   to="/signin"
                   onClick={() => setMenuOpen(false)}
-                  className="text-blue-600">
+                  className="py-2 text-blue-600 hover:underline">
                   Sign In
                 </Link>
                 <Link
                   to="/signup"
                   onClick={() => setMenuOpen(false)}
-                  className="text-green-600">
+                  className="py-2 text-green-600 hover:underline">
                   Sign Up
                 </Link>
               </>
             )}
           </div>
-        </div>
+        </>
       )}
     </nav>
   );

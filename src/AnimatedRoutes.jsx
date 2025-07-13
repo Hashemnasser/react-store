@@ -12,6 +12,7 @@ import SignIn from "./pages/SignIn";
 import PrivateRoute from "./utils/PrivateRoute";
 import MyOrders from "./pages/MyOrders";
 import UserProfile from "./pages/UserProfile";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -64,6 +65,7 @@ const AnimatedRoutes = () => {
             </PrivateRoute>
           }
         />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </AnimatePresence>
   );
