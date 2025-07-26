@@ -13,6 +13,9 @@ import PrivateRoute from "./utils/PrivateRoute";
 import MyOrders from "./pages/MyOrders";
 import UserProfile from "./pages/UserProfile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AdminOrders from "./pages/admin/AdminOrders";
+import AdminLayout from "./pages/admin/AdminLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -66,6 +69,21 @@ const AnimatedRoutes = () => {
           }
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        {/* <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} /> // عند زيارة /admin
+          <Route path="orders" element={<AdminOrders />} /> // عند زيارة
+          /admin/orders
+          <Route path="products" element={<AdminProducts />} /> // عند زيارة
+          /admin/products
+          <Route path="users" element={<AdminUsers />} /> // عند زيارة
+          /admin/users
+        </Route> */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          {/* <Route path="products" element={<AdminProducts />} /> */}
+          <Route path="orders" element={<AdminOrders />} />
+          {/* <Route path="users" element={<AdminUsers />} /> */}
+        </Route>
       </Routes>
     </AnimatePresence>
   );

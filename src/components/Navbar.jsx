@@ -5,6 +5,7 @@ import useCart from "../context/useCart";
 import useWishList from "../context/useWishList";
 import { useAuth } from "../context/useAuth";
 import { FaHeart } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -151,103 +152,117 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Sidebar Menu */}
-      {menuOpen && (
-        <>
-          {/* الخلفية السوداء */}
-          <div
-            className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-40"
-            onClick={() => setMenuOpen(false)}
-          />
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            {/* الخلفية السوداء */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0  bg-opacity-70 bg-white  backdrop-blur-sm z-100"
+              onClick={() => setMenuOpen(false)}
+            />
 
-          {/* القائمة الجانبية */}
-          <div className="fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-gray-900 shadow-lg p-6 overflow-y-auto flex flex-col">
-            {/* رأس القائمة */}
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold text-blue-600">Menu</h2>
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="material-icons text-2xl text-gray-700 dark:text-white">
-                close
-              </button>
-            </div>
+            {/* القائمة الجانبية */}
+            <motion.div
+              initial={{ y: "-800%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-5000%" }}
+              transition={{ duration: 0.5 }}
+              className="fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-gray-900 shadow-lg flex flex-col transition-transform duration-300 translate-x-0">
+              {/* رأس القائمة */}
+              <div className="flex justify-between items-center  z-60 relative ">
+                <h2 className="text-xl font-bold text-blue-600 mx-auto ps-5">
+                  Menu
+                </h2>
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="material-icons text-2xl text-gray-700 dark:text-white">
+                  close
+                </button>
+              </div>
 
-            {/* روابط القائمة */}
-            <Link
-              to="/"
-              onClick={() => setMenuOpen(false)}
-              className="py-2 hover:text-blue-600">
-              Home
-            </Link>
-            <Link
-              to="/products"
-              onClick={() => setMenuOpen(false)}
-              className="py-2 hover:text-blue-600">
-              Products
-            </Link>
-            <Link
-              to="/cart"
-              onClick={() => setMenuOpen(false)}
-              className="py-2 hover:text-blue-600">
-              Cart
-            </Link>
-            <Link
-              to="/wishlist"
-              onClick={() => setMenuOpen(false)}
-              className="py-2 hover:text-blue-600">
-              WishList
-            </Link>
-            <Link
-              to="/privacy-policy"
-              onClick={() => setMenuOpen(false)}
-              className="py-2 hover:text-blue-600">
-              Privacy Policy
-            </Link>
-
-            {user && (
-              <>
+              {/* روابط القائمة */}
+              <motion.div className="bg-white flex flex-col  items-center  ">
+                {" "}
                 <Link
-                  to="/orders"
+                  to="/"
                   onClick={() => setMenuOpen(false)}
                   className="py-2 hover:text-blue-600">
-                  My Orders
+                  Home
                 </Link>
                 <Link
-                  to="/profile"
+                  to="/products"
                   onClick={() => setMenuOpen(false)}
                   className="py-2 hover:text-blue-600">
-                  Profile
-                </Link>
-              </>
-            )}
-
-            {user ? (
-              <button
-                onClick={() => {
-                  logout();
-                  setMenuOpen(false);
-                }}
-                className="py-2 text-left text-red-600 hover:underline">
-                Sign Out
-              </button>
-            ) : (
-              <>
-                <Link
-                  to="/signin"
-                  onClick={() => setMenuOpen(false)}
-                  className="py-2 text-blue-600 hover:underline">
-                  Sign In
+                  Products
                 </Link>
                 <Link
-                  to="/signup"
+                  to="/cart"
                   onClick={() => setMenuOpen(false)}
-                  className="py-2 text-green-600 hover:underline">
-                  Sign Up
+                  className="py-2 hover:text-blue-600">
+                  Cart
                 </Link>
-              </>
-            )}
-          </div>
-        </>
-      )}
+                <Link
+                  to="/wishlist"
+                  onClick={() => setMenuOpen(false)}
+                  className="py-2 hover:text-blue-600">
+                  WishList
+                </Link>
+                <Link
+                  to="/privacy-policy"
+                  onClick={() => setMenuOpen(false)}
+                  className="py-2 hover:text-blue-600">
+                  Privacy Policy
+                </Link>
+                {user && (
+                  <>
+                    <Link
+                      to="/orders"
+                      onClick={() => setMenuOpen(false)}
+                      className="py-2 hover:text-blue-600">
+                      My Orders
+                    </Link>
+                    <Link
+                      to="/profile"
+                      onClick={() => setMenuOpen(false)}
+                      className="py-2 hover:text-blue-600">
+                      Profile
+                    </Link>
+                  </>
+                )}
+                {user ? (
+                  <button
+                    onClick={() => {
+                      logout();
+                      setMenuOpen(false);
+                    }}
+                    className="py-2 text-left text-red-600 hover:underline">
+                    Sign Out
+                  </button>
+                ) : (
+                  <>
+                    <Link
+                      to="/signin"
+                      onClick={() => setMenuOpen(false)}
+                      className="py-2 text-blue-600 hover:underline">
+                      Sign In
+                    </Link>
+                    <Link
+                      to="/signup"
+                      onClick={() => setMenuOpen(false)}
+                      className="py-2 text-green-600 hover:underline">
+                      Sign Up
+                    </Link>
+                  </>
+                )}
+              </motion.div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
