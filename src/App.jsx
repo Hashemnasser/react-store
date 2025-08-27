@@ -10,7 +10,7 @@ const App = () => {
       <Router>
         <div className="min-h-screen bg-gray-100 dark:text-white dark:bg-gray-800">
           <Navbar />
-          <main className="pt-20">
+          <main>
             <AnimatedRoutes /> {/* ✅ هنا صار كل شي مضبوط */}
           </main>
         </div>

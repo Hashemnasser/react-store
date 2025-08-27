@@ -17,7 +17,7 @@ export const createOrder = async (orderData) => {
 };
 
 // 🟡 جلب كل الطلبات
-export const fetchAllOrders = async () => {
+export const fetchOrders = async () => {
   try {
     const res = await fetch(BASE_URL);
     if (!res.ok) throw new Error("Failed to fetch orders");
@@ -41,7 +41,7 @@ export const fetchUserOrders = async (userId) => {
 };
 
 // 🔴 حذف طلب معيّن
-export const deleteOrder = async (orderId) => {
+export const deleteOrderById = async (orderId) => {
   try {
     const res = await fetch(`${BASE_URL}/${orderId}`, {
       method: "DELETE",
@@ -53,3 +53,18 @@ export const deleteOrder = async (orderId) => {
     return false;
   }
 };
+// حذف جميع الطلبات
+export async function deleteAllOrders() {
+  try {
+    const orders = await fetchOrders();
+    const results = await Promise.all(
+      orders.map((order) =>
+        fetch(`${BASE_URL}/orders/${order.id}`, { method: "DELETE" })
+      )
+    );
+    return results;
+  } catch (error) {
+    console.error("Error deleting all orders:", error);
+    throw error;
+  }
+}

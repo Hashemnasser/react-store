@@ -4,9 +4,9 @@ import { Link, Outlet } from "react-router-dom";
 
 const AdminLayout = () => {
   return (
-    <div className="flex min-h-screen">
+    <div className="grid grid-cols-12 min-h-screen ">
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-800 text-white p-6 space-y-4">
+      <aside className="col-span-4 bg-gray-800 text-white p-6 space-y-4 md:col-span-2 sticky top-12 z-50 h-screen">
         <h2 className="text-2xl font-bold mb-6">Admin Panel</h2>
         <nav className="flex flex-col gap-3">
           <Link to="/admin" className="hover:text-blue-400">
@@ -25,7 +25,7 @@ const AdminLayout = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 bg-gray-100 dark:bg-gray-900 p-6">
+      <main className=" bg-gray-100 dark:bg-gray-900 p-4 col-span-8 md:col-span-9">
         <Outlet />
       </main>
     </div>

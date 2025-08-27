@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { deleteOrder, fetchUserOrders } from "../api/orders";
+import { deleteOrderById, fetchUserOrders } from "../api/orders";
 import { fetchProducts } from "../api/products";
 import { useAuth } from "../context/useAuth";
 import useCart from "../context/useCart"; // ✅ استدعاء addToCart
@@ -39,7 +39,7 @@ const MyOrders = () => {
     if (!window.confirm("Clear entire orders list?")) return;
 
     try {
-      await Promise.all(orders.map((order) => deleteOrder(order.id)));
+      await Promise.all(orders.map((order) => deleteOrderById(order.id)));
       setOrders([]);
     } catch (err) {
       console.error("❌ Failed to delete orders:", err.message);
@@ -49,7 +49,7 @@ const MyOrders = () => {
   const handleDeleteOrder = async (orderId) => {
     if (!window.confirm("Delete this order?")) return;
     try {
-      await deleteOrder(orderId);
+      await deleteOrderById(orderId);
       setOrders((prev) => prev.filter((o) => o.id !== orderId));
     } catch (err) {
       console.error("❌ Failed to delete order:", err.message);

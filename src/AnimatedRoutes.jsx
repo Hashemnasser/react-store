@@ -16,6 +16,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AdminOrders from "./pages/admin/AdminOrders";
 import AdminLayout from "./pages/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminProducts from "./pages/admin/AdminProducts";
+import AddEditProduct from "./pages/admin/AddEditProduct";
+import AdminUsers from "./pages/admin/AdminUsers";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -80,9 +83,11 @@ const AnimatedRoutes = () => {
         </Route> */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
-          {/* <Route path="products" element={<AdminProducts />} /> */}
+          <Route path="products" element={<AdminProducts />} />
           <Route path="orders" element={<AdminOrders />} />
-          {/* <Route path="users" element={<AdminUsers />} /> */}
+          <Route path="products/add" element={<AddEditProduct />} />
+          <Route path="products/edit/:id" element={<AddEditProduct />} />
+          <Route path="users" element={<AdminUsers />} />
         </Route>
       </Routes>
     </AnimatePresence>
