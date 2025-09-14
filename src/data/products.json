@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Black Wireless Earbuds",
+    "description": "Compact wireless earbuds with noise cancellation and charging case.",
+    "price": 59.99,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80",
+    "category": "Audio"
+  },
+  {
+    "id": 2,
+    "name": "White Fast Charger",
+    "description": "Fast charging USB-C charger for smartphones and tablets.",
+    "price": 25.5,
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80",
+    "category": "Chargers"
+  },
+  {
+    "id": 3,
+    "name": "Portable Bluetooth Speaker",
+    "description": "Waterproof portable Bluetooth speaker with powerful bass.",
+    "price": 79.0,
+    "image": "https://images.unsplash.com/photo-1512499617640-c2f999fbd32d?auto=format&fit=crop&w=400&q=80",
+    "category": "Audio"
+  },
+  {
+    "id": 4,
+    "name": "Car Phone Holder",
+    "description": "Adjustable car phone holder with secure grip and 360° rotation.",
+    "price": 18.75,
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80",
+    "category": "Holders"
+  },
+  {
+    "id": 5,
+    "name": "USB-C Charging Cable",
+    "description": "Durable USB-C cable with fast charging support and nylon braid.",
+    "price": 12.99,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    "category": "Cables"
+  },
+  {
+    "id": 6,
+    "name": "Adjustable Laptop Stand",
+    "description": "Aluminum adjustable laptop stand for better ergonomics.",
+    "price": 34.0,
+    "image": "https://images.unsplash.com/photo-1510552776732-03e61cf4b144?auto=format&fit=crop&w=400&q=80",
+    "category": "Stands"
+  },
+  {
+    "id": 7,
+    "name": "Wireless Computer Mouse",
+    "description": "Ergonomic wireless mouse with adjustable DPI and silent clicks.",
+    "price": 29.49,
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 8,
+    "name": "Portable Power Bank",
+    "description": "High capacity 10000mAh power bank with dual USB ports.",
+    "price": 39.99,
+    "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+    "category": "Chargers"
+  },
+  {
+    "id": 9,
+    "name": "Over-ear Noise Cancelling Headphones",
+    "description": "Comfortable headphones with active noise cancellation and clear sound.",
+    "price": 89.75,
+    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=400&q=80",
+    "category": "Audio"
+  },
+  {
+    "id": 10,
+    "name": "Adjustable Tablet Stand",
+    "description": "Multi-angle adjustable stand for tablets and e-readers.",
+    "price": 22.99,
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80",
+    "category": "Stands"
+  },
+  {
+    "id": 11,
+    "name": "HDMI Cable",
+    "description": "High-speed HDMI cable supporting 4K video and HDR.",
+    "price": 15.0,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80",
+    "category": "Cables"
+  },
+  {
+    "id": 12,
+    "name": "Tempered Glass Screen Protector",
+    "description": "Scratch-resistant tempered glass protector for smartphones.",
+    "price": 9.99,
+    "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 13,
+    "name": "Mechanical Gaming Keyboard",
+    "description": "RGB backlit mechanical keyboard with programmable keys.",
+    "price": 79.99,
+    "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 14,
+    "name": "USB 3.0 Hub",
+    "description": "Compact USB hub with 4 high-speed ports.",
+    "price": 19.95,
+    "image": "https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 15,
+    "name": "Silicone Smartwatch Band",
+    "description": "Comfortable silicone strap compatible with most smartwatches.",
+    "price": 14.3,
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 16,
+    "name": "Qi Wireless Charger",
+    "description": "Fast wireless charging pad compatible with Qi-enabled devices.",
+    "price": 24.99,
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80",
+    "category": "Chargers"
+  },
+  {
+    "id": 17,
+    "name": "USB-C to Lightning Cable",
+    "description": "Durable cable for fast charging Apple devices.",
+    "price": 18.0,
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80",
+    "category": "Cables"
+  },
+  {
+    "id": 18,
+    "name": "Laptop Cooling Pad",
+    "description": "Cooling pad with dual fans for laptops up to 17 inches.",
+    "price": 29.5,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80",
+    "category": "Stands"
+  },
+  {
+    "id": 19,
+    "name": "Wireless Gaming Headset",
+    "description": "Comfortable wireless headset with surround sound.",
+    "price": 59.99,
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80",
+    "category": "Audio"
+  },
+  {
+    "id": 20,
+    "name": "Magnetic Car Phone Mount",
+    "description": "Strong magnetic phone mount for car dashboard.",
+    "price": 19.0,
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80",
+    "category": "Holders"
+  },
+  {
+    "id": 21,
+    "name": "Portable External Hard Drive",
+    "description": "1TB external hard drive with USB 3.0 interface.",
+    "price": 59.5,
+    "image": "https://images.unsplash.com/photo-1512499617640-c2f999fbd32d?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 22,
+    "name": "Bluetooth Car Adapter",
+    "description": "Adapter for hands-free calls and music streaming in cars.",
+    "price": 29.0,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    "category": "Audio"
+  },
+  {
+    "id": 23,
+    "name": "1080p HD Webcam",
+    "description": "Webcam with built-in microphone for clear video calls.",
+    "price": 49.99,
+    "image": "https://images.unsplash.com/photo-1510552776732-03e61cf4b144?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 24,
+    "name": "Shockproof Tablet Case",
+    "description": "Protective case with built-in stand for tablets.",
+    "price": 25.99,
+    "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 25,
+    "name": "Wireless Bluetooth Keyboard",
+    "description": "Slim wireless keyboard with rechargeable battery.",
+    "price": 34.49,
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  }
+]
