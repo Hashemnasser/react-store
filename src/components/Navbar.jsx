@@ -215,6 +215,12 @@ const Navbar = () => {
                   className="py-2 hover:text-blue-600">
                   Cart
                 </Link>
+                {user?.role === "admin" && (
+                  <Link to="/admin" className="hover:text-blue-600">
+                    {" "}
+                    Admin Panel
+                  </Link>
+                )}
                 <Link
                   to="/wishlist"
                   onClick={() => setMenuOpen(false)}
