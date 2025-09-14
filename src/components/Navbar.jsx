@@ -217,7 +217,7 @@ const Navbar = () => {
                 </Link>
                 {user?.role === "admin" && (
                   <Link to="/admin" className="hover:text-blue-600">
-                    {" "}
+                    {"   "}
                     Admin Panel
                   </Link>
                 )}
