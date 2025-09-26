@@ -5,6 +5,11 @@ import useCart from "../context/useCart";
 import useReviews from "../context/useReviews";
 import { motion } from "framer-motion";
 import ProductCardSkeleton from "../components/ProductCardSkeleton"; // ✅ استخدام الهيكل العظمي
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+// تحويل LazyLoadImage إلى نسخة قابلة للتحريك
+// const MotionLazyImage = motion.create(LazyLoadImage);
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -58,14 +63,17 @@ const ProductDetails = () => {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="max-w-4xl mx-auto px-4 py-8 dark:text-white dark:bg-gray-800">
       <div className="grid md:grid-cols-2 gap-6">
-        <motion.img
-          src={product.image}
-          alt={product.name}
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          className="w-full h-96 object-cover rounded-lg"
-        />
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}>
+          <LazyLoadImage
+            src={product.image}
+            alt={product.name}
+            effect="blur"
+            className="w-full h-96 object-cover rounded-lg"
+          />
+        </motion.div>
 
         <div>
           <motion.h1

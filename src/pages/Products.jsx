@@ -1,5 +1,12 @@
-import React, { startTransition, useEffect, useMemo, useState } from "react";
-import ProductCard from "../components/ProductCard";
+import React, {
+  startTransition,
+  useEffect,
+  useMemo,
+  useState,
+  lazy,
+  Suspense,
+} from "react";
+// import ProductCard from "../components/ProductCard";
 import PriceFilterBar from "../components/PriceFilterBar";
 import { useDebounce } from "../utils/CustomHooks";
 import PageContainer from "../components/PageContainer";
@@ -9,6 +16,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import useWishList from "../context/useWishList";
 import { fetchProducts } from "../api/products";
 
+const ProductCard = lazy(() => import("../components/ProductCard"));
 const categories = [
   "All",
   "Audio",
@@ -30,9 +38,10 @@ const Products = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
   const { isInWishList } = useWishList();
-  const debouncedValue = useDebounce(searchTerm);
+  const debouncedValue = useDebounce(searchTerm, 500);
   useEffect(() => {
     setIsLoading(true);
+
     fetchProducts()
       .then(setProducts)
       .catch((err) => console.error(err))
@@ -271,19 +280,27 @@ const Products = () => {
                 <ProductCardSkeleton key={index} />
               ))
             ) : currentProducts.length > 0 ? (
-              currentProducts.map((product) => (
-                <motion.div
-                  key={product.id}
-                  layout
-                  layoutId={`product-card-${product.id}`}
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="animate"
-                  exit="exit"
-                  transition={{ duration: 0.85, ease: "easeOut" }}>
-                  <ProductCard product={product} />
-                </motion.div>
-              ))
+              <Suspense
+                fallback={Array.from({ length: productsPerPage }).map(
+                  (_, index) => (
+                    <ProductCardSkeleton key={index} />
+                  )
+                )}>
+                {" "}
+                {currentProducts.map((product) => (
+                  <motion.div
+                    key={product.id}
+                    layout
+                    layoutId={`product-card-${product.id}`}
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="animate"
+                    exit="exit"
+                    transition={{ duration: 0.85, ease: "easeOut" }}>
+                    <ProductCard product={product} />
+                  </motion.div>
+                ))}
+              </Suspense>
             ) : (
               <p className="text-gray-600">No products found.</p>
             )}

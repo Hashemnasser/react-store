@@ -79,6 +79,7 @@ const Cart = () => {
               className="flex justify-between items-center bg-white shadow p-4 rounded-lg dark:bg-gray-800">
               <div className="flex items-center gap-4">
                 <img
+                  loading="lazy"
                   src={item.image}
                   alt={item.name}
                   className="w-16 h-16 object-cover rounded"

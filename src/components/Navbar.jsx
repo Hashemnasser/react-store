@@ -35,6 +35,12 @@ const Navbar = () => {
     <nav className="bg-white/50 backdrop-blur-md shadow-md  py-2 px-6 sticky top-0 z-50 dark:text-white dark:bg-gray-800">
       <div className="flex justify-between items-center gap-3">
         {/* Logo */}
+        {/* <img
+        src="/logo.png"
+        alt="My Store"
+        loading="lazy" // ✅ تحميل كسول
+        className="w-28"
+      /> */}
         <Link to="/" className="text-2xl font-bold text-blue-600 ">
           ProStore
         </Link>

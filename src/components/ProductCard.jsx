@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import useCart from "../context/useCart";
 import useWishList from "../context/useWishList";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
   const { isInWishList, addToWishList, removeFromWishList } = useWishList();
@@ -36,9 +37,10 @@ const ProductCard = ({ product }) => {
       </div>
 
       <Link to={`/products/${product.id}`}>
-        <img
+        <LazyLoadImage
           src={product.image}
           alt={product.name}
+          effect="blur"
           className="w-full h-48 object-cover rounded-md mb-4"
         />
 

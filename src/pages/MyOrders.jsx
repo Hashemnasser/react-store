@@ -116,6 +116,7 @@ const MyOrders = () => {
                   key={`${order.id}-${product.id}`}
                   className="flex items-center gap-4">
                   <img
+                    loading="lazy"
                     src={product.image}
                     alt={product.name}
                     className="w-16 h-16 object-cover rounded"
